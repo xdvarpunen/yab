@@ -1,6 +1,9 @@
 const { app, BrowserWindow, Menu } = require('electron')
+const autoUpdater = require("electron-updater");
 
 function createWindow() {
+    autoUpdater.checkForUpdatesAndNotify();
+    
     const win = new BrowserWindow({
         webPreferences: {
             nodeIntegration: true,

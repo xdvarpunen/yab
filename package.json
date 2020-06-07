@@ -4,13 +4,17 @@
   "description": "Yet Another Browser",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "build": "electron-builder --mac --windows --linux",
+    "release": "electron-builder --mac --windows --linux --publish always"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^9.0.2",
-    "electron-builder": "^22.7.0"
+    "electron-builder": "^22.7.0",
+    "electron-updater": "^4.3.1"
   }
 }
