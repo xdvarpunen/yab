@@ -1,0 +1,15 @@
+{
+  "name": "yab",
+  "version": "1.0.0",
+  "description": "Yet Another Browser",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.0.2"
+  }
+}
