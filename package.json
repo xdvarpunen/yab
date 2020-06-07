@@ -1,6 +1,6 @@
 {
   "name": "yab",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Yet Another Browser",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,10 @@
     "build": "electron-builder --windows --publish never",
     "deploy": "electron-builder build --win --publish always"
   },
-  "repository": "https://github.com/xdvarpunen/yab",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/xdvarpunen/yab.git"
+  },
   "homepage": "https://github.com/xdvarpunen/yab",
   "keywords": [],
   "author": "xdvarpunen",
