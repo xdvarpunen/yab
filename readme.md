@@ -39,3 +39,45 @@ https://www.electronjs.org/apps/biscuit
 npm install # install dependencies
 npm run start # see app running
 ```
+
+
+### Building
+
+* [Electron Builder Action](https://github.com/marketplace/actions/electron-builder-action)
+* [electron-builder](https://www.electron.build/)
+
+```yaml
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - name: Check out Git repository
+      # https://github.com/actions/checkout
+      uses: actions/checkout@v2
+    - name: Install Node.js and NPM
+      # https://github.com/actions/setup-node
+      uses: actions/setup-node@v1
+      with:
+          node-version: 10
+    - name: Build/release Electron App
+      uses: samuelmeuli/action-electron-builder@v1
+      with:
+          # GitHub token, automatically provided to the action
+          # (No need to define this secret in the repo settings)
+          github_token: ${{ secrets.github_token }}
+
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+```
