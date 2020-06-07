@@ -94,3 +94,4 @@ jobs:
 "release": "electron-builder --mac --windows --linux --publish=always"
     "release": "build",
      portable --publish onTagOrDraft
+     https://stackoverflow.com/questions/55618591/how-to-publish-to-a-private-github-with-electron-builder-nsis-and-appimage
