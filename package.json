@@ -1,20 +1,25 @@
 {
   "name": "yab",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Yet Another Browser",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "postinstall": "electron-builder install-app-deps",
     "build": "electron-builder --windows",
-    "release": "electron-builder --windows --publish always"
+    "release": "electron-builder --windows --publish=always"
   },
   "keywords": [],
-  "author": "",
+  "author": "xdvarpunen",
   "license": "ISC",
   "devDependencies": {
     "electron": "^9.0.2",
     "electron-builder": "^22.7.0",
     "electron-updater": "^4.3.1"
+  },
+  "build":{
+    "appId": "com.electron.yab",
+    "productName": "yab",
+    "copyright": "Copyright © year ${author}"
   }
 }

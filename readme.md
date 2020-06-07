@@ -87,3 +87,8 @@ jobs:
 * Make sure your tag name's format is v*.*.*. Your workflow will use this tag to detect when to create a release
 
 * [Auto Update](https://www.electron.build/auto-update)
+
+
+
+"build": "electron-builder --mac --windows --linux",
+"release": "electron-builder --mac --windows --linux --publish=always"
