@@ -32,8 +32,8 @@ Browser where your favorite apps won't get buried in tabs.
 https://www.electronjs.org/apps/biscuit
 
 ## Development
-https://www.electronjs.org/docs/tutorial/first-app
-https://www.electronjs.org/docs/api/webview-tag
+* [Electron first app](https://www.electronjs.org/docs/tutorial/first-app)
+* [Electron <webview>](https://www.electronjs.org/docs/api/webview-tag)
 
 ```powershell
 npm install # install dependencies
