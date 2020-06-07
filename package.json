@@ -1,13 +1,13 @@
 {
   "name": "yab",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Yet Another Browser",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "postinstall": "electron-builder install-app-deps",
-    "build": "electron-builder --windows",
-    "release": "build"
+    "build": "electron-builder --windows --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
   "repository": "https://github.com/xdvarpunen/yab",
   "homepage": "https://github.com/xdvarpunen/yab",

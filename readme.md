@@ -92,3 +92,4 @@ jobs:
 
 "build": "electron-builder --mac --windows --linux",
 "release": "electron-builder --mac --windows --linux --publish=always"
+    "release": "build",
