@@ -81,3 +81,8 @@ jobs:
           # release the app after building
           release: ${{ startsWith(github.ref, 'refs/tags/v') }}
 ```
+
+* update package.json version '1.0.0'
+* commit the package.json change and tag the change
+* Make sure your tag name's format is v*.*.*. Your workflow will use this tag to detect when to create a release
+* Make sure your tag name's format is v*.*.*. Your workflow will use this tag to detect when to create a release
