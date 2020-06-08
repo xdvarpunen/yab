@@ -92,7 +92,8 @@ jobs:
 
 * [Auto Update](https://www.electron.build/auto-update)
 
-
+https://github.com/samuelmeuli/action-electron-builder/blob/master/index.js#L129
+npx --no-install electron-builder --windows --publish always .
 
 "build": "electron-builder --mac --windows --linux",
 "release": "electron-builder --mac --windows --linux --publish=always"
