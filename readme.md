@@ -43,6 +43,10 @@ npm run start # see app running
 
 ### Building
 
+* [How to](https://github.com/electron-userland/electron-builder/issues/4260)
+Not much examples. Random blog online. Very.
+* [Blog](https://medium.com/@johnjjung/building-an-electron-app-on-github-actions-windows-and-macos-53ab69703f7c)
+
 * [Electron Builder Action](https://github.com/marketplace/actions/electron-builder-action)
 * [electron-builder](https://www.electron.build/)
 
