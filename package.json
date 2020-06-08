@@ -1,6 +1,6 @@
 {
   "name": "yab",
-  "version": "2.1.17",
+  "version": "2.1.18",
   "description": "Yet Another Browser",
   "main": "index.js",
   "scripts": {
@@ -34,7 +34,12 @@
     },
     "publish": [
       {
-        "provider": "github"
+        "provider": "github",
+        "repo":"yab",
+        "owner": "xdvarpunen",
+        "protocol": "https",
+        "releaseType": "release",
+        "vPrefixedTagName": true
       }
     ]
   }

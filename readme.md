@@ -3,9 +3,16 @@
 ## Features
 * Enter url and load HTML+CSS based contents that Chromium supports
 * JavaScript is disabled
+* No telemetrics
+* No account
+* No dedicated download location
 * No settings, no themes, no cli flags
 * No tabs
 * No bookmarks
+
+## Roadmap
+* clear history on browser close
+* history back & forward button
 
 ## Inspiration
 https://www.electronjs.org/apps?q=web-browser
