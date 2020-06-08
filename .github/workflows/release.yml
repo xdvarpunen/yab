@@ -2,24 +2,15 @@ name: Build/release
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches: 
+      - master
 jobs:
   release:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        # macos-latest, ubuntu-latest
-        os: [windows-latest] 
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    runs-on: windows-latest
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Check out Git repository
-      # https://github.com/actions/checkout
       uses: actions/checkout@v2
     - name: Install Node.js and NPM
-      # https://github.com/actions/setup-node
       uses: actions/setup-node@v1
       with:
           node-version: 10

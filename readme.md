@@ -95,6 +95,9 @@ jobs:
 https://github.com/samuelmeuli/action-electron-builder/blob/master/index.js#L129
 npx --no-install electron-builder --windows --publish always .
 
+https://github.com/electron-userland/electron-builder/blob/7b335dbd7e5ca754598ca93318be1404fc518485/packages/electron-publish/src/gitHubPublisher.ts#L142
+
+
 "build": "electron-builder --mac --windows --linux",
 "release": "electron-builder --mac --windows --linux --publish=always"
     "release": "build",
