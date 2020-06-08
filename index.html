@@ -43,6 +43,23 @@
                 webview.loadURL(document.querySelector('input').value)
             }
         }
+
+        function canGoForward(){
+            webview.canGoForward()
+        }
+
+        function goBack(){
+            webview.goBack()
+        }
+
+        function goForward(){
+            webview.goForward()
+        }
+
+        // https://stackoverflow.com/questions/36091378/closing-application-and-notifying-renderer-process
+        window.addEventListener('unload',function() {
+            webview.clearHistory()
+        })
     </script>
 </body>
 

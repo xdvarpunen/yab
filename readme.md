@@ -9,6 +9,7 @@
 * No settings, no themes, no cli flags
 * No tabs
 * No bookmarks
+* No popups
 
 ## Roadmap
 * clear history on browser close

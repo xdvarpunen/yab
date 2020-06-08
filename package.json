@@ -1,6 +1,6 @@
 {
   "name": "yab",
-  "version": "2.1.18",
+  "version": "2.1.19",
   "description": "Yet Another Browser",
   "main": "index.js",
   "scripts": {
