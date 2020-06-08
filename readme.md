@@ -1,8 +1,11 @@
 # Yet Another Browser
 
 ## Features
-* JavaScript is disabled
 * Enter url and load HTML+CSS based contents that Chromium supports
+* JavaScript is disabled
+* No settings, no themes, no cli flags
+* No tabs
+* No bookmarks
 
 ## Inspiration
 https://www.electronjs.org/apps?q=web-browser
