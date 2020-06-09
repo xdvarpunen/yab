@@ -1,5 +1,7 @@
 # Yet Another Browser
 
+Electron based browser built with vanilla JS,HTML,CSS. Focus on maintainability, learnability and simplicity.
+
 ## Features
 * Enter url and load HTML+CSS based contents that Chromium supports
 * JavaScript is disabled
