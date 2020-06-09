@@ -6,6 +6,10 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 
 ## Features
 * Enter url and load HTML+CSS based contents that Chromium supports
+* clear history on browser close
+* history back & forward button
+* page reload button
+* show page title
 * JavaScript is disabled
 * No telemetrics
 * No crash reporting
@@ -18,8 +22,7 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 * No homepage or home button
 
 ## Roadmap
-* clear history on browser close
-* history back & forward button
+* recognize when can go back and forward
 * adblock
 
 ## No JavaScript
