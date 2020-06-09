@@ -1,5 +1,7 @@
 # Yet Another Browser
 
+![Build/release](https://github.com/xdvarpunen/yab/workflows/Build/release/badge.svg)
+
 Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainability, learnability and simplicity.
 
 ## Features
