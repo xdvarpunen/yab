@@ -19,6 +19,9 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 * history back & forward button
 * adblock
 
+## No JavaScript
+https://stackoverflow.com/questions/822872/do-web-sites-really-need-to-cater-for-browsers-that-dont-have-javascript-enable
+
 ## Inspiration
 https://www.electronjs.org/apps?q=web-browser
 
