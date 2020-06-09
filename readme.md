@@ -6,6 +6,7 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 * Enter url and load HTML+CSS based contents that Chromium supports
 * JavaScript is disabled
 * No telemetrics
+* No crash reporting
 * No account
 * No dedicated download location
 * No settings, no themes, no cli flags
