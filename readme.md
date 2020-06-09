@@ -14,6 +14,7 @@
 ## Roadmap
 * clear history on browser close
 * history back & forward button
+* adblock
 
 ## Inspiration
 https://www.electronjs.org/apps?q=web-browser
