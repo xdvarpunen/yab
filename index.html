@@ -29,11 +29,35 @@
 </head>
 
 <body>
-    <input type="text" placeholder="url..." onkeypress="handleInputKeypress(event)">
+    <div class="input-container">
+        <button onclick="goBack()" id="back-button">Back</button>
+        <button onclick="goForward()" id="forward-button">Forward</button>
+        <button onclick="reload()">Reload</button>
+        <span id="page-title"></span>
+        <input type="text" placeholder="url..." onkeypress="handleInputKeypress(event)">
+    </div>
     <!-- https://discuss.atom.io/t/disabling-javascript-in-webview/31040 -->
-    <webview id="foo" src="https://www.github.com/" webpreferences="javascript=no"></webview>
+    <webview id="foo" src="about:blank" webpreferences="javascript=no"></webview>
     <script>
         const webview = document.querySelector('webview')
+
+        function canGoForward() {
+            webview.canGoForward()
+        }
+
+        function canGoBack() {
+            webview.canGoBack()
+        }
+
+        webview.addEventListener('load-commit', function (e) {
+            document.querySelector('input').value = e.url
+            document.getElementById('page-title').innerText = webview.getTitle()
+            // looks like canGoBack and canGoForward don't work, return always undefined
+            // https://stackoverflow.com/questions/7526601/setattributedisabled-false-changes-editable-attribute-to-false
+            // canGoBack() ? document.getElementById('back-button').setAttribute("disabled", "") : document.getElementById('back-button').removeAttribute("disabled", "")
+            // canGoForward() ? document.getElementById('forward-button').setAttribute("disabled", "") : document.getElementById('forward-button').removeAttribute("disabled", "")
+        })
+
         function handleInputKeypress(e) {
             // https://keycode.info/
             if (e.keyCode === 13) {
@@ -44,20 +68,20 @@
             }
         }
 
-        function canGoForward(){
-            webview.canGoForward()
-        }
-
-        function goBack(){
+        function goBack() {
             webview.goBack()
         }
 
-        function goForward(){
+        function goForward() {
             webview.goForward()
         }
 
+        function reload() {
+            webview.reload()
+        }
+
         // https://stackoverflow.com/questions/36091378/closing-application-and-notifying-renderer-process
-        window.addEventListener('unload',function() {
+        window.addEventListener('unload', function () {
             webview.clearHistory()
         })
     </script>
