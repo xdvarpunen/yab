@@ -15,6 +15,7 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 * No tabs
 * No bookmarks
 * No popups
+* No homepage or home button
 
 ## Roadmap
 * clear history on browser close
