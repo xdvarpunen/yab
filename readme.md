@@ -12,26 +12,32 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 * show page title
 * No
   * JavaScript
-  * telemetrics
-  * crash reporting
-  * account
-  * dedicated download location
-  * settings, no themes, no cli flags
-  * tabs
-  * bookmarks
-  * popups
-  * home button
+  * Crash reporting
+  * Popups 
+  * Telemetrics
+  * Account
+  * Dedicated download location
+  * Settings, no themes, no cli flags
+  * Tabs
+  * Bookmarks
+  * Home button
 
 ## Roadmap
 * redirect url and http(s) addition
 * adblock
 * installer
 
+## How
 
-## No JavaScript
+### JavaScript
 https://stackoverflow.com/questions/822872/do-web-sites-really-need-to-cater-for-browsers-that-dont-have-javascript-enable
 
-* crash reporter https://www.electronjs.org/docs/api/crash-reporter
+### Popups
+Popups are disabled in webview by default. [Source](https://www.electronjs.org/docs/api/webview-tag#allowpopups)
+
+### Crash reporting
+Crash reporting is feature added by developer. Not adding. [Source](https://www.electronjs.org/docs/api/crash-reporter)
+
 ## Inspiration
 https://www.electronjs.org/apps?q=web-browser
 
