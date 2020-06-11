@@ -12,7 +12,6 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 * show page title
 * No
   * JavaScript
-  * JavaScript is disabled
   * telemetrics
   * crash reporting
   * account
