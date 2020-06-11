@@ -16,7 +16,8 @@ function createWindow() {
 
     win.loadFile('index.html')
 
-    win.webContents.openDevTools()
+    // comment out for development
+    // win.webContents.openDevTools()
 }
 
 app.whenReady().then(createWindow)

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Yet Another Browser</title>
+    <title>about:blank</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <style>
@@ -33,7 +33,6 @@
         <button onclick="goBack()" id="back-button">Back</button>
         <button onclick="goForward()" id="forward-button">Forward</button>
         <button onclick="reload()">Reload</button>
-        <span id="page-title"></span>
         <input type="text" placeholder="url..." onkeypress="handleInputKeypress(event)">
     </div>
     <!-- https://discuss.atom.io/t/disabling-javascript-in-webview/31040 -->
@@ -42,11 +41,11 @@
         const webview = document.getElementById('foo');
         webview.addEventListener('load-commit', function (e) {
             document.querySelector('input').value = e.url
-            document.getElementById('page-title').innerText = webview.getTitle()
-            // looks like canGoBack and canGoForward don't work, return always undefined
-            // https://stackoverflow.com/questions/7526601/setattributedisabled-false-changes-editable-attribute-to-false
             canGoBack() ? document.getElementById('back-button').removeAttribute("disabled", "") : document.getElementById('back-button').setAttribute("disabled", "");
             canGoForward() ? document.getElementById('forward-button').removeAttribute("disabled", "") : document.getElementById('forward-button').setAttribute("disabled", "")
+        })
+        webview.addEventListener('page-title-updated',function(e){
+            document.title = e.title
         })
         function canGoForward() {
             const webview = document.getElementById('foo');
