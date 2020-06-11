@@ -22,7 +22,6 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 * No homepage or home button
 
 ## Roadmap
-* recognize when can go back and forward
 * adblock
 
 ## No JavaScript
