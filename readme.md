@@ -127,3 +127,6 @@ https://github.com/electron-userland/electron-builder/blob/7b335dbd7e5ca754598ca
     "release": "build",
      portable --publish onTagOrDraft
      https://stackoverflow.com/questions/55618591/how-to-publish-to-a-private-github-with-electron-builder-nsis-and-appimage
+
+To reduce build time
+https://github.com/actions/cache/blob/master/examples.md#node---npm
