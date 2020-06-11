@@ -22,8 +22,16 @@
             grid-template-columns: auto;
         }
 
+        .input-container {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            width: 100%;
+        }
+
         input {
             border: none;
+            flex: 1;
         }
     </style>
 </head>
@@ -44,7 +52,7 @@
             canGoBack() ? document.getElementById('back-button').removeAttribute("disabled", "") : document.getElementById('back-button').setAttribute("disabled", "");
             canGoForward() ? document.getElementById('forward-button').removeAttribute("disabled", "") : document.getElementById('forward-button').setAttribute("disabled", "")
         })
-        webview.addEventListener('page-title-updated',function(e){
+        webview.addEventListener('page-title-updated', function (e) {
             document.title = e.title
         })
         function canGoForward() {
