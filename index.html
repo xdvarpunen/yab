@@ -69,8 +69,6 @@
             // https://keycode.info/
             if (e.keyCode === 13) {
                 e.preventDefault();
-                // https://github.com/electron/electron/issues/18177
-                // TODO: issue with redirect & reload
                 const url = document.querySelector('input').value
                 const https = 'https://'
                 if (url.includes(https)) {
