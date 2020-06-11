@@ -24,6 +24,7 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 
 ## Roadmap
 * adblock
+* installer
 
 ## No JavaScript
 https://stackoverflow.com/questions/822872/do-web-sites-really-need-to-cater-for-browsers-that-dont-have-javascript-enable
