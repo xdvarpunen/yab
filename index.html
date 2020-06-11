@@ -39,24 +39,24 @@
     <!-- https://discuss.atom.io/t/disabling-javascript-in-webview/31040 -->
     <webview id="foo" src="about:blank" webpreferences="javascript=no"></webview>
     <script>
-        const webview = document.querySelector('webview')
-
-        function canGoForward() {
-            webview.canGoForward()
-        }
-
-        function canGoBack() {
-            webview.canGoBack()
-        }
-
+        const webview = document.getElementById('foo');
         webview.addEventListener('load-commit', function (e) {
             document.querySelector('input').value = e.url
             document.getElementById('page-title').innerText = webview.getTitle()
             // looks like canGoBack and canGoForward don't work, return always undefined
             // https://stackoverflow.com/questions/7526601/setattributedisabled-false-changes-editable-attribute-to-false
-            // canGoBack() ? document.getElementById('back-button').setAttribute("disabled", "") : document.getElementById('back-button').removeAttribute("disabled", "")
-            // canGoForward() ? document.getElementById('forward-button').setAttribute("disabled", "") : document.getElementById('forward-button').removeAttribute("disabled", "")
+            canGoBack() ? document.getElementById('back-button').removeAttribute("disabled", "") : document.getElementById('back-button').setAttribute("disabled", "");
+            canGoForward() ? document.getElementById('forward-button').removeAttribute("disabled", "") : document.getElementById('forward-button').setAttribute("disabled", "")
         })
+        function canGoForward() {
+            const webview = document.getElementById('foo');
+            return webview.canGoForward()
+        }
+
+        function canGoBack() {
+            const webview = document.getElementById('foo');
+            return webview.canGoBack()
+        }
 
         function handleInputKeypress(e) {
             // https://keycode.info/
