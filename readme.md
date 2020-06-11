@@ -23,14 +23,15 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
   * home button
 
 ## Roadmap
+* redirect url and http(s) addition
 * adblock
 * installer
 
-* crash reporter https://www.electronjs.org/docs/api/crash-reporter
 
 ## No JavaScript
 https://stackoverflow.com/questions/822872/do-web-sites-really-need-to-cater-for-browsers-that-dont-have-javascript-enable
 
+* crash reporter https://www.electronjs.org/docs/api/crash-reporter
 ## Inspiration
 https://www.electronjs.org/apps?q=web-browser
 
