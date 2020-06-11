@@ -131,3 +131,5 @@ https://github.com/electron-userland/electron-builder/blob/7b335dbd7e5ca754598ca
 
 To reduce build time
 https://github.com/actions/cache/blob/master/examples.md#node---npm
+
+Check electron updates https://www.electronjs.org/docs/tutorial/electron-timelines
