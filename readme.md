@@ -23,7 +23,6 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
   * Home button
 
 ## Roadmap
-* redirect url and http(s) addition
 * adblock
 * installer
 
@@ -37,6 +36,25 @@ Popups are disabled in webview by default. [Source](https://www.electronjs.org/d
 
 ### Crash reporting
 Crash reporting is feature added by developer. Not adding. [Source](https://www.electronjs.org/docs/api/crash-reporter)
+
+### Adblock
+* NoScript is for Firefox only. [Source](https://noscript.net/)
+* uMatrix. [Source](https://addons.mozilla.org/en-US/firefox/addon/umatrix/)
+* uOrigin [Source](https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/)
+
+https://github.com/cliqz-oss/adblocker
+https://github.com/cliqz-oss/adblocker/blob/master/packages/adblocker-electron/README.md
+https://github.com/cliqz-oss/adblocker/blob/master/packages/adblocker/README.md
+```
+import { FiltersEngine } from '@cliqz/adblocker';
+import { Request } from '@cliqz/adblocker';
+engine = await FiltersEngine.fromPrebuiltAdsAndTracking(fetch); // ads and tracking
+
+const { match } = engine.match(Request.fromRawDetails({
+  type: 'script',
+  url: 'https://domain.com/ads.js',
+}));
+```
 
 ## Inspiration
 https://www.electronjs.org/apps?q=web-browser

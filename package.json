@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "yab",
   "version": "2.1.19",
   "description": "Yet Another Browser",
@@ -35,12 +36,16 @@
     "publish": [
       {
         "provider": "github",
-        "repo":"yab",
+        "repo": "yab",
         "owner": "xdvarpunen",
         "protocol": "https",
         "releaseType": "release",
         "vPrefixedTagName": true
       }
     ]
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.16.0",
+    "cross-fetch": "^3.0.4"
   }
 }
