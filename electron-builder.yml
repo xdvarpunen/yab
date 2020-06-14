@@ -1,18 +1,9 @@
-# yml, because it can include comments and separate from package.json
-# Source: https://stackoverflow.com/questions/50905886/i-am-trying-to-turn-my-electron-app-to-windows-portable
 appId: com.electron.yab
 productName: yab
 copyright: hmm
 win:
   target: portable
   artifactName: ${productName}-v${version}-${os}_${arch}.${ext}
-  # https://www.electron.build/configuration/publish#github-repository-and-bintray-package
-  # https://github.com/electron-userland/electron-builder/issues/1693
-  # go to GitHub settings, then developer settings and then personal access token.
-  # https://github.com/settings/tokens/new
-  # publish:
-  #   - github
-  #     releaseType: release
 directories:
   output: dist
   buildResources: build
