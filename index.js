@@ -23,8 +23,12 @@ function createWindow() {
 
     win.loadFile('index.html')
 
+    // most sites work fine in maximize
+    // most sites use bootstrap-ish framework to hide menu and that's it
+    win.maximize()
+
     // comment out for development
-    win.webContents.openDevTools()
+    // win.webContents.openDevTools()
 }
 
 // https://github.com/cliqz-oss/adblocker/blob/master/packages/adblocker-electron-example/index.ts#L70
