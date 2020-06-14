@@ -58,6 +58,21 @@ const { match } = engine.match(Request.fromRawDetails({
 }));
 ```
 
+https://www.npmjs.com/package/@cliqz/adblocker-electron
+https://github.com/cliqz-oss/adblocker/tree/master/packages/adblocker-electron-example
+https://github.com/cliqz-oss/adblocker/blob/master/packages/adblocker-electron-example/index.ts
+
+Wrapping ads and trackers blocking into session. Will see.
+```javascript
+if (session.defaultSession === undefined) {
+    throw new Error('defaultSession is undefined');
+}
+
+ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
+    blocker.enableBlockingInSession(session.defaultSession);
+});
+```
+
 ## Inspiration
 https://www.electronjs.org/apps?q=web-browser
 
