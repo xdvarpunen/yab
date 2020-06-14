@@ -10,6 +10,9 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
 * history back & forward button
 * page reload button
 * show page title
+* adblock
+  * ads
+  * trackers
 * No
   * JavaScript
   * Crash reporting
@@ -23,7 +26,6 @@ Electron based browser built with vanilla JS,HTML and CSS. Focus on maintainabil
   * Home button
 
 ## Roadmap
-* adblock
 * installer
 
 ## How
