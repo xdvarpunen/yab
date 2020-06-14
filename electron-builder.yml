@@ -10,11 +10,14 @@ win:
   # https://github.com/electron-userland/electron-builder/issues/1693
   # go to GitHub settings, then developer settings and then personal access token.
   # https://github.com/settings/tokens/new
-  publish:
-    - github
-      releaseType: release
+  # publish:
+  #   - github
+  #     releaseType: release
 directories:
   output: dist
   buildResources: build
   app: .
 asar: true
+publish:
+  provider: github
+  releaseType: release
