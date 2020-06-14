@@ -8,7 +8,6 @@
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "env": "set DEBUG=electron-builder"
   },
