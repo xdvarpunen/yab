@@ -1,14 +1,14 @@
 {
   "private": true,
   "name": "yab",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Yet Another Browser",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "watch": "nodemon --exec electron .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "electron-builder",
+    "dist": "electron-builder --publish always",
     "env": "set DEBUG=electron-builder"
   },
   "repository": {
