@@ -1,0 +1,19 @@
+# yml, because it can include comments and separate from package.json
+# Source: https://stackoverflow.com/questions/50905886/i-am-trying-to-turn-my-electron-app-to-windows-portable
+appId: com.electron.yab
+productName: yab
+copyright: hmm
+win:
+  target: portable
+  artifactName: yab.exe
+  publish:
+    - github
+directories:
+  output: dist
+  buildResources: build
+  app: .
+asar: true
+publish:
+  proviced: github
+  ownder: xdvarpunen
+  repo: yab

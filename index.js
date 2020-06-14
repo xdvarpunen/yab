@@ -1,11 +1,8 @@
 const { app, BrowserWindow, Menu, session } = require('electron')
 const { ElectronBlocker } = require('@cliqz/adblocker-electron');
-const {fetch } = require('cross-fetch'); // required 'fetch'
-// const autoUpdater = require("electron-updater");
+const {fetch } = require('cross-fetch');
 
 function createWindow() {
-    // autoUpdater.checkForUpdatesAndNotify();
-
     const win = new BrowserWindow({
         webPreferences: {
             nodeIntegration: true,
@@ -27,8 +24,13 @@ function createWindow() {
     win.loadFile('index.html')
 
     // comment out for development
-    // win.webContents.openDevTools()
+    win.webContents.openDevTools()
 }
+
+// https://github.com/cliqz-oss/adblocker/blob/master/packages/adblocker-electron-example/index.ts#L70
+// https://www.electronjs.org/docs/api/app#appallowrendererprocessreuse
+// https://github.com/electron/electron/issues/18397
+app.allowRendererProcessReuse = false; 
 
 app.whenReady().then(createWindow)
 

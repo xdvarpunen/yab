@@ -109,9 +109,7 @@ npm install # install dependencies
 npm run start # see app running
 ```
 
-
 ### Building
-
 * [How to](https://github.com/electron-userland/electron-builder/issues/4260)
 Not much examples. Random blog online. Very.
 * [Blog](https://medium.com/@johnjjung/building-an-electron-app-on-github-actions-windows-and-macos-53ab69703f7c)
@@ -177,3 +175,45 @@ To reduce build time
 https://github.com/actions/cache/blob/master/examples.md#node---npm
 
 Check electron updates https://www.electronjs.org/docs/tutorial/electron-timelines
+
+
+```json
+// the build part for electron-builder
+"build": {
+  "appId": "com.electron.yab",
+  "productName": "yab",
+  "copyright": "Copyright © year ${author}",
+  "win": {
+    "publish": [
+      "github"
+    ]
+  },
+  "publish": [
+    {
+      "provider": "github",
+      "repo": "yab",
+      "owner": "xdvarpunen",
+      "protocol": "https",
+      "releaseType": "release",
+      "vPrefixedTagName": true
+    }
+  ]
+},
+```
+
+electron-builder
+
+`electron-builder install-app-deps`
+https://github.com/electron-userland/electron-builder/issues/1906
+> optional command. In any case electron-builder will rebuild production native deps on build.
+
+https://www.electron.build/#quick-setup-guide
+> To ensure your native dependencies are always matched electron version, simply add script "postinstall": "electron-builder 
+> install-app-deps" to your package.json.
+
+## Code-Signing
+It costs money.
+https://www.electron.build/code-signing#where-to-buy-code-signing-certificate
+https://docs.microsoft.com/en-us/windows-hardware/drivers/dashboard/get-a-code-signing-certificate?redirectedfrom=MSDN
+https://stackoverflow.com/questions/11833481/non-apple-issued-code-signing-certificate-can-it-work-with-mac-os-10-8-gatekeep
+

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>about:blank</title>
+    <title>yab</title>
     <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <style>
@@ -18,7 +18,7 @@
             display: grid;
             padding: 0px;
             margin: 0px;
-            grid-template-rows: 2em auto;
+            grid-template-rows: 2em 2em auto;
             grid-template-columns: auto;
         }
 
@@ -33,10 +33,24 @@
             border: 1px solid black;
             flex: 1;
         }
+
+        .favicon-url-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        span,
+        img {
+            vertical-align: middle;
+        }
     </style>
 </head>
 
 <body>
+    <div class="favicon-url-container">
+        <img src="" alt="" id="favicon">
+        <span id="title"></span>
+    </div>
     <div class="input-container">
         <button onclick="goBack()" id="back-button">Back</button>
         <button onclick="goForward()" id="forward-button">Forward</button>
@@ -52,8 +66,14 @@
             canGoBack() ? document.getElementById('back-button').removeAttribute("disabled", "") : document.getElementById('back-button').setAttribute("disabled", "");
             canGoForward() ? document.getElementById('forward-button').removeAttribute("disabled", "") : document.getElementById('forward-button').setAttribute("disabled", "")
         })
+        webview.addEventListener('page-favicon-updated', function (e) {
+            // order is not guaranteed
+            // https://github.com/electron/electron/issues/1079
+            const favicon = e.favicons.length > 0 ? e.favicons[0] : ''
+            document.getElementById('favicon').src = favicon
+        })
         webview.addEventListener('page-title-updated', function (e) {
-            document.title = e.title
+            document.getElementById('title').innerText = e.title
         })
         function canGoForward() {
             const webview = document.getElementById('foo');
