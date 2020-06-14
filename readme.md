@@ -217,3 +217,7 @@ https://www.electron.build/code-signing#where-to-buy-code-signing-certificate
 https://docs.microsoft.com/en-us/windows-hardware/drivers/dashboard/get-a-code-signing-certificate?redirectedfrom=MSDN
 https://stackoverflow.com/questions/11833481/non-apple-issued-code-signing-certificate-can-it-work-with-mac-os-10-8-gatekeep
 
+just release => shows up, but 
+releaseType = release => overwrites but won't appear in newest release
+fix: rename file making it unique to show up in the newest release
+https://github.com/ashah360/GrubNinja/blob/master/electron-builder.yml#L28

@@ -5,7 +5,7 @@ productName: yab
 copyright: hmm
 win:
   target: portable
-  artifactName: artifactName: ${productName}-v${version}-${os}_${arch}.${ext}
+  artifactName: ${productName}-v${version}-${os}_${arch}.${ext}
   # https://www.electron.build/configuration/publish#github-repository-and-bintray-package
   # https://github.com/electron-userland/electron-builder/issues/1693
   # go to GitHub settings, then developer settings and then personal access token.
