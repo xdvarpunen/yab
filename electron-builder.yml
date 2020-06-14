@@ -12,6 +12,7 @@ win:
   # https://github.com/settings/tokens/new
   publish:
     - github
+        releaseType: release
 directories:
   output: dist
   buildResources: build
