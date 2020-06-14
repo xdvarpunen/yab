@@ -6,6 +6,7 @@ copyright: hmm
 win:
   target: portable
   artifactName: yab.exe
+  # https://www.electron.build/configuration/publish#github-repository-and-bintray-package
   publish:
     - github
 directories:
@@ -13,7 +14,7 @@ directories:
   buildResources: build
   app: .
 asar: true
-publish:
-  proviced: github
-  ownder: xdvarpunen
-  repo: yab
+# publish:
+#   provider: github
+#   ownder: xdvarpunen
+#   repo: yab
